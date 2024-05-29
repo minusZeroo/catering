@@ -27,8 +27,20 @@ public class EventView {
         String name = scanner.next();
         System.out.println("Enter the number of guests: ");
         int guests = scanner.nextInt();
-        return new Event(guests, name);        
+        return new Event(name, guests);        
     }
+    
+    public void displayCost(double cost) {
+        System.out.println("Total Cost: R" + cost);
+    }
+    
+    public void displayWeekendCost(double cost, double extraCost, double totalCost) {
+        System.out.println("Cost: R" + cost);
+        System.out.println("Extra Cost: R" + extraCost);
+        System.out.println("Total Cost: R" + totalCost);       
+    }
+    
+    
 
     
     

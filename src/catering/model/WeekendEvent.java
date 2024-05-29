@@ -10,8 +10,17 @@ package catering.model;
  */
 public class WeekendEvent extends Event{
     
-    private final double WEEKEND_EXTRA_COST = 5.00;
-    private final double WEEKEND_FLAT_RATE = 200.00;
+    public static final double WEEKEND_EXTRA_COST = 5.00;
+    private static final double WEEKEND_FLAT_RATE = 200.00;
+
+    public WeekendEvent() {
+    }
+
+    public WeekendEvent(String hostName, int numberOfGuests) {
+        super(hostName, numberOfGuests);
+    }
+    
+    
     
     public double calaculateCost() {
         return super.calculateCost() + WEEKEND_FLAT_RATE + (numberOfGuests * WEEKEND_EXTRA_COST);

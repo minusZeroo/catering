@@ -11,15 +11,15 @@ package catering.model;
 public class Event {
     
     protected int numberOfGuests;
-    private String hostName;
-    private final double COST_PER_GUEST = 100.00;
+    protected String hostName;
+    protected final double COST_PER_GUEST = 100.00;
 
     public Event() {
         this.numberOfGuests = 0;
         this.hostName = "No host";
     }
 
-    public Event(int numberOfGuests, String hostName) {
+    public Event(String hostName, int numberOfGuests) {
         this.numberOfGuests = numberOfGuests;
         this.hostName = hostName;
     }   
@@ -47,10 +47,6 @@ public class Event {
     @Override
     public String toString() {
         return "Event hosted by " + hostName + ", with " + numberOfGuests + " guests.";
-    }
-    
-    
-    
-    
+    }  
     
 }

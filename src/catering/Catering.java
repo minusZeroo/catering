@@ -4,6 +4,10 @@
  */
 package catering;
 
+import catering.controller.EventController;
+import catering.model.Event;
+import catering.view.EventView;
+
 /**
  *
  * @author @minuszeroo
@@ -14,7 +18,12 @@ public class Catering {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        EventView view = new EventView();
+        EventController controller = new EventController(view);
+        Event event = controller.getEvent();
+        controller.calculateCost(event);
+        
     }
     
 }
